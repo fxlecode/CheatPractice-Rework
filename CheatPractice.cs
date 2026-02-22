@@ -175,17 +175,6 @@ namespace CheatPractice
 
         public static void SendResults()
         {
-            Console.WriteLine("\nExecution completed. File information:".Pastel(Color.FromArgb(165, 229, 250)));
-            Console.WriteLine($"Executable Name: {cheatName}".Pastel(Color.FromArgb(173, 216, 230)));
-            Console.WriteLine($"Storage Path: {cheatPath}".Pastel(Color.FromArgb(173, 216, 230)));
-            Console.WriteLine($"File Size: {cheatSize} bytes".Pastel(Color.FromArgb(173, 216, 230)));
-            
-            bool changeExtension = GetConfiguration("ChangeExtension", configuration);
-            if (changeExtension && !string.IsNullOrEmpty(extensionChangedPath))
-            {
-                Console.WriteLine($"Modified Path: {extensionChangedPath}".Pastel(Color.FromArgb(255, 200, 100)));
-            }
-            
             VerifyFileNameWithRetries();
         }
 
@@ -195,6 +184,9 @@ namespace CheatPractice
             int attempts = 0;
             bool verified = false;
             string fileNameToFind = extensionChangedPath != null ? Path.GetFileName(extensionChangedPath) : cheatName;
+
+            Console.WriteLine("\nPress enter to reveal file information".Pastel(Color.FromArgb(81, 63, 169)));
+            Console.ReadLine();
 
             Console.WriteLine("\n" + new string('=', 60).Pastel(Color.FromArgb(255, 200, 100)));
             Console.WriteLine("VERIFICATION CHALLENGE".Pastel(Color.FromArgb(255, 200, 100)));
@@ -218,6 +210,17 @@ namespace CheatPractice
                 if (userInput.Equals(fileNameToFind, StringComparison.OrdinalIgnoreCase))
                 {
                     verified = true;
+                    Console.WriteLine("\nExecution completed. File information:".Pastel(Color.FromArgb(165, 229, 250)));
+                    Console.WriteLine($"Executable Name: {cheatName}".Pastel(Color.FromArgb(173, 216, 230)));
+                    Console.WriteLine($"Storage Path: {cheatPath}".Pastel(Color.FromArgb(173, 216, 230)));
+                    Console.WriteLine($"File Size: {cheatSize} bytes".Pastel(Color.FromArgb(173, 216, 230)));
+                    
+                    bool changeExtension = GetConfiguration("ChangeExtension", configuration);
+                    if (changeExtension && !string.IsNullOrEmpty(extensionChangedPath))
+                    {
+                        Console.WriteLine($"Modified Path: {extensionChangedPath}".Pastel(Color.FromArgb(255, 200, 100)));
+                    }
+                    
                     Console.WriteLine("\n✓ Correct! Filename verified.".Pastel(Color.FromArgb(100, 200, 100)));
                     Console.WriteLine($"Location: {cheatPath}\\{fileNameToFind}".Pastel(Color.FromArgb(100, 200, 100)));
                 }
@@ -231,7 +234,18 @@ namespace CheatPractice
                     else
                     {
                         Console.WriteLine("\n✗ Maximum attempts exceeded. Challenge failed.".Pastel(Color.FromArgb(255, 0, 0)));
-                        Console.WriteLine($"The correct answer was: {fileNameToFind}".Pastel(Color.FromArgb(255, 150, 100)));
+                        Console.WriteLine("\nExecution completed. File information:".Pastel(Color.FromArgb(165, 229, 250)));
+                        Console.WriteLine($"Executable Name: {cheatName}".Pastel(Color.FromArgb(173, 216, 230)));
+                        Console.WriteLine($"Storage Path: {cheatPath}".Pastel(Color.FromArgb(173, 216, 230)));
+                        Console.WriteLine($"File Size: {cheatSize} bytes".Pastel(Color.FromArgb(173, 216, 230)));
+                        
+                        bool changeExtensionFailed = GetConfiguration("ChangeExtension", configuration);
+                        if (changeExtensionFailed && !string.IsNullOrEmpty(extensionChangedPath))
+                        {
+                            Console.WriteLine($"Modified Path: {extensionChangedPath}".Pastel(Color.FromArgb(255, 200, 100)));
+                        }
+                        
+                        Console.WriteLine($"\nThe correct answer was: {fileNameToFind}".Pastel(Color.FromArgb(255, 150, 100)));
                         Console.WriteLine("\nPress enter to exit...".Pastel(Color.FromArgb(166, 214, 8)));
                         Console.ReadLine();
                     }
@@ -504,8 +518,6 @@ namespace CheatPractice
                 }
                 catch { }
             }
-
-            Console.WriteLine("\nPress enter to reveal file information".Pastel(Color.FromArgb(81, 63, 169)));
 
             cheatName = randomFileName;
             cheatPath = randomFolderPath;
