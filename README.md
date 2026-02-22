@@ -1,11 +1,18 @@
 # CheatPractice 2.0
 Forensic practice environment for testing anti-cheat detection methods and evasion techniques.
 
+## Quick Start
+
+Two versions available:
+- **CheatPractice-Light.exe** (2.5 MB) - Fast, requires .NET 9 Runtime
+- **CheatPractice-Standalone.exe** (80 MB) - Self-contained, no dependencies
+
+See [VERSIONS.md](VERSIONS.md) for detailed comparison.
+
 ## Requirements
 * Administrator privileges required
 * Windows 10/11 recommended
-* .NET Framework 4.7.2 or higher
-* Antivirus may need to be disabled for full functionality
+* Choose version based on your .NET availability (see VERSIONS.md)
 
 ## Description
 CheatPractice is a training tool for security specialists to create test executables with various forensic evasion techniques. Configure detection methods, execute the file, and practice forensic analysis on your own system.

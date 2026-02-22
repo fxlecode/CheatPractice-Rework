@@ -185,8 +185,58 @@ namespace CheatPractice
             {
                 Console.WriteLine($"Modified Path: {extensionChangedPath}".Pastel(Color.FromArgb(255, 200, 100)));
             }
-            Console.WriteLine("\nPress enter to continue...".Pastel(Color.FromArgb(166, 214, 8)));
-            Console.ReadLine();
+            
+            VerifyFileNameWithRetries();
+        }
+
+        private static void VerifyFileNameWithRetries()
+        {
+            int maxAttempts = 3;
+            int attempts = 0;
+            bool verified = false;
+            string fileNameToFind = extensionChangedPath != null ? Path.GetFileName(extensionChangedPath) : cheatName;
+
+            Console.WriteLine("\n" + new string('=', 60).Pastel(Color.FromArgb(255, 200, 100)));
+            Console.WriteLine("VERIFICATION CHALLENGE".Pastel(Color.FromArgb(255, 200, 100)));
+            Console.WriteLine(new string('=', 60).Pastel(Color.FromArgb(255, 200, 100)));
+            Console.WriteLine($"\nEnter the filename with extension (you have {maxAttempts} attempts):".Pastel(Color.FromArgb(166, 214, 8)));
+
+            while (attempts < maxAttempts && !verified)
+            {
+                attempts++;
+                Console.WriteLine($"\nAttempt {attempts}/{maxAttempts}:".Pastel(Color.FromArgb(255, 182, 193)));
+                Console.Write("Filename: ".Pastel(Color.FromArgb(140, 220, 250)));
+                
+                string userInput = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(userInput))
+                {
+                    Console.WriteLine("Invalid input. Filename cannot be empty.".Pastel(Color.FromArgb(255, 100, 100)));
+                    continue;
+                }
+
+                if (userInput.Equals(fileNameToFind, StringComparison.OrdinalIgnoreCase))
+                {
+                    verified = true;
+                    Console.WriteLine("\n✓ Correct! Filename verified.".Pastel(Color.FromArgb(100, 200, 100)));
+                    Console.WriteLine($"Location: {cheatPath}\\{fileNameToFind}".Pastel(Color.FromArgb(100, 200, 100)));
+                }
+                else
+                {
+                    int remainingAttempts = maxAttempts - attempts;
+                    if (remainingAttempts > 0)
+                    {
+                        Console.WriteLine($"✗ Incorrect. {remainingAttempts} attempt(s) remaining.".Pastel(Color.FromArgb(255, 100, 100)));
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n✗ Maximum attempts exceeded. Challenge failed.".Pastel(Color.FromArgb(255, 0, 0)));
+                        Console.WriteLine($"The correct answer was: {fileNameToFind}".Pastel(Color.FromArgb(255, 150, 100)));
+                        Console.WriteLine("\nPress enter to exit...".Pastel(Color.FromArgb(166, 214, 8)));
+                        Console.ReadLine();
+                    }
+                }
+            }
         }
 
         public static void CreateCheat()
