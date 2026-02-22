@@ -1,0 +1,2 @@
+C:\Users\fxle\Documents\CheatPractice-Rework\CheatPractice-Rework\bin\x64\Release\net9.0-windows\win-x64\publish\CheatPractice.pdb
+C:\Users\fxle\Documents\CheatPractice-Rework\CheatPractice-Rework\bin\x64\Release\net9.0-windows\win-x64\publish\CheatPractice.exe

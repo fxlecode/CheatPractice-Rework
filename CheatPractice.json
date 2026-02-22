@@ -1,1 +1,74 @@
-[{"Item1":"HideInWindowsFolders","Item2":false},{"Item1":"DeleteBam","Item2":false},{"Item1":"StopMainServices","Item2":false},{"Item1":"StartServicesAfterExecute","Item2":false},{"Item1":"PrefetchDeletion","Item2":false},{"Item1":"RandomSize","Item2":false},{"Item1":"ChangeExtension","Item2":true},{"Item1":"ChangedTime","Item2":false},{"Item1":"StringDeletor","Item2":false},{"Item1":"DeleteJournal","Item2":false},{"Item1":"CommonCheatStrings","Item2":false},{"Item1":"StopMoreServices","Item2":false}]
+[
+  {
+    "Item1": "HideInWindowsFolders",
+    "Item2": false
+  },
+  {
+    "Item1": "StopMainServices",
+    "Item2": false
+  },
+  {
+    "Item1": "StartServicesAfterExecute",
+    "Item2": false
+  },
+  {
+    "Item1": "StopMoreServices",
+    "Item2": false
+  },
+  {
+    "Item1": "DeleteBam",
+    "Item2": false
+  },
+  {
+    "Item1": "NoPrefetch",
+    "Item2": false
+  },
+  {
+    "Item1": "RandomSize",
+    "Item2": false
+  },
+  {
+    "Item1": "ChangeExtension",
+    "Item2": false
+  },
+  {
+    "Item1": "ChangeTime",
+    "Item2": false
+  },
+  {
+    "Item1": "CommonCheatStrings",
+    "Item2": false
+  },
+  {
+    "Item1": "DeleteJournal",
+    "Item2": false
+  },
+  {
+    "Item1": "StringCleaner",
+    "Item2": false
+  },
+  {
+    "Item1": "ClearEventViewer",
+    "Item2": false
+  },
+  {
+    "Item1": "ClearMRU",
+    "Item2": false
+  },
+  {
+    "Item1": "ClearRecycleBin",
+    "Item2": false
+  },
+  {
+    "Item1": "ClearTempFiles",
+    "Item2": false
+  },
+  {
+    "Item1": "DisableUAC",
+    "Item2": false
+  },
+  {
+    "Item1": "ClearSystemCache",
+    "Item2": false
+  }
+]

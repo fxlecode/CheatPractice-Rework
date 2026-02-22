@@ -1,52 +1,79 @@
-# CheatPractice
-Create cheats with custom bypass methods to practice screensharing
+# CheatPractice 2.0
+Forensic practice environment for testing anti-cheat detection methods and evasion techniques.
 
-* Se debe ejecutar con permisos de administrador
-* Es recomendable tener el antivirus desactivado (recomendado, no necesario)
-* Puede que la primera o segunda vez te pida ejecutar a ti el .exe así que por consecuencia verás el cheat
+## Requirements
+* Administrator privileges required
+* Windows 10/11 recommended
+* .NET Framework 4.7.2 or higher
+* Antivirus may need to be disabled for full functionality
 
-*I'm too lazy and bad to write in English*
+## Description
+CheatPractice is a training tool for security specialists to create test executables with various forensic evasion techniques. Configure detection methods, execute the file, and practice forensic analysis on your own system.
 
-Con este programa podrás crear un cheat para detectar en tu propio ordenador, tu lo personalizas y seleccionas métodos, está dirigido a los que están iniciando.
+## How to Use
+1. Run the program with administrator privileges
+2. Configure desired settings using option 1
+3. Select option 2 to create and execute the test file
+4. Use forensic tools to locate and analyze the generated executable
+5. Save your configuration with option 3 for reuse
 
-# ¿Cómo usar?
-- Lo abres y luego runneas la opción número 2 que es lanzar el cheat con las opciones previamente configuradas, luego empieza a buscarlo, así de simple, es un .exe más.
+## Troubleshooting
+| Error | Solution |
+|-------|----------|
+| File not found | Restart the program |
+| Cheat not working | Verify admin privileges and retry |
+| Inaccessible path | Re-execute with option 2 |
+| Missing DLL files | Copy required DLLs from Compiler folder to System32 |
 
-# Errores conocidos
-- Archivo no encontrado : Abre y cierra el programa
-- Cheat not working : Ocurrió un error al ejecutar y crear el cheat, reabre el programa
-- Ruta no accesible : Vuelve a ejecutar el cheat con el 2, esto ocurre cuando el cheat se guarda en una ruta no permitida.
-- .dll faltantes : Se deberían instalar solos, si no ve a la carpeta Compiler y copia "ucrtbased.dll", "vcruntime140D.dll", "vcruntime140_1D.dll", "MSVCP140D.dll", luego pegalos en System32
+## Configuration Options
 
-# To Do
-- Mejorar el código
-- Configuración random
+| Option | Description |
+|--------|-------------|
+| Hide in Windows Folders | Hide generated file in Windows system directories |
+| Stop Main Services | Pause core Windows services (sysmain, pcasvc) |
+| Start Services After Execute | Restore services after execution |
+| Stop More Services | Pause additional services (dps, diagtrack, eventlog) |
+| Delete BAM | Remove Boot Access Memory artifacts |
+| No Prefetch | Remove prefetch data for the executable |
+| Random Size | Generate random file size (1-3MB) |
+| Change Extension | Modify file extension to disguise file type |
+| Change Time | Modify file timestamp |
+| Common Cheat Strings | Inject common detection strings |
+| Delete Journal | Clear USN Journal entries |
+| String Cleaner | Remove string metadata from executable |
+| Clear Event Viewer | Clear Windows Event logs |
+| Clear MRU | Clear Most Recently Used registry entries |
+| Clear Recycle Bin | Empty system recycle bin |
+| Clear Temp Files | Remove temporary files |
+| Disable UAC | Temporarily disable User Access Control |
+| Clear System Cache | Clear system cache data |
 
-Cualquier bug hablenme por discord "fluctua" o hagan una issue en github.
-Puedes guardar tu configuración con la opción "Generate Config"
-También puedes importar configuraciones de otros con "Load Config"
+## External Resources
+* [PsExec.exe](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec) - Registry modification
+* [csc.exe](https://learn.microsoft.com/en-us/visualstudio/msbuild/csc-task) - C# compiler
+* stringhelper.exe - String redaction utility
+* Pastel.dll - Console color library
 
-| Config Options               |                                                           |
-|------------------------------|-----------------------------------------------------------|
-| Hide in Windows Folders      | Permite esconder el cheat generado en carpetas de Windows |
-| Delete Bam                   | Borra bam                                                 |
-| Stop main services           | Para servicios fundamentales pero no todos                |
-| Start Services After Execute | Inicia los servicios después de ejecutar el cheat         |
-| No prefetch                  | Un poco useless, borra el prefetch del cheat              |
-| Random Size                  | Da un peso al azar al cheat                               |
-| Change File Extension        | Cambia la extensión del archivo a una al azar             |
-| Change LastWrite Time        | Cambia la fecha del archivo                               |
-| String Cleaner               | Borra las strings                        |
-| Delete Journal               | Borra journal                                             |
-| Random Common Cheat Strings  | Añade "strings" comunes al cheat                          |
-| Stop More Services           | Para servicios menos importantes                          |
-| FuckEventViewer              | Borra rastros en Event Viewer                             |
+## Features in Version 2.0
+- Code modernization with improved error handling
+- Additional forensic evasion techniques
+- System state backup and restoration
+- MRU and registry cleanup
+- Recycle bin clearing
+- Temporary file removal
+- UAC control with restoration
+- Event log clearing
+- Improved UI and messaging
+- JSON configuration system with pretty-printing
 
-# ¿Por qué tiene archivos ejecutables adicionales?
-- [PsExec.exe](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec) - Se usa para borrar regedit
-- [csc.exe](https://learn.microsoft.com/es-es/visualstudio/msbuild/csc-task?view=vs-2022) - Se usa para compilar el cheat en caso de poderse.
-- stringhelper.exe - Esté archivo es mío, solo se ejecuta si activas la opción de String Cleaner, pues como dice su nombre hace eso, si no te fias pues no pongas esa opción y ya xd
-- Los demás .dll son para que funcione el programa y sus dependencias.
+## Notes
+- All system changes are reversible (except USN Journal which is unrecoverable)
+- Configuration files can be shared and imported
+- Generated files remain on system for analysis
+- Tool is for authorized security research only
+
+Contact: GitHub Issues for bug reports and feature requests
+
 
 # Imagenes
 ![image](https://github.com/nay-cat/CheatPractice/assets/63517637/308556b6-aa97-460a-9c44-1b04157bacce)

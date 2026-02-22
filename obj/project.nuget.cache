@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "kKsPKTIsqwU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fxle\\Documents\\CheatPractice-Rework\\CheatPractice-Rework\\CheatPractice.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fxle\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.13\\microsoft.net.illink.tasks.9.0.13.nupkg.sha512",
+    "C:\\Users\\fxle\\.nuget\\packages\\pastel\\7.0.0\\pastel.7.0.0.nupkg.sha512",
+    "C:\\Users\\fxle\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.0\\system.diagnostics.eventlog.9.0.0.nupkg.sha512",
+    "C:\\Users\\fxle\\.nuget\\packages\\system.directoryservices\\9.0.0\\system.directoryservices.9.0.0.nupkg.sha512",
+    "C:\\Users\\fxle\\.nuget\\packages\\system.serviceprocess.servicecontroller\\9.0.0\\system.serviceprocess.servicecontroller.9.0.0.nupkg.sha512",
+    "C:\\Users\\fxle\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\9.0.13\\microsoft.netcore.app.runtime.win-x64.9.0.13.nupkg.sha512",
+    "C:\\Users\\fxle\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\9.0.13\\microsoft.windowsdesktop.app.runtime.win-x64.9.0.13.nupkg.sha512",
+    "C:\\Users\\fxle\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.13\\microsoft.aspnetcore.app.runtime.win-x64.9.0.13.nupkg.sha512",
+    "C:\\Users\\fxle\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\9.0.13\\microsoft.netcore.app.crossgen2.win-x64.9.0.13.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "CheatPractice depende de Pastel (>= 6.2.0), pero no se encontró Pastel 6.2.0. Pastel 7.0.0 se resolvió en su lugar.",
+      "projectPath": "C:\\Users\\fxle\\Documents\\CheatPractice-Rework\\CheatPractice-Rework\\CheatPractice.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\fxle\\Documents\\CheatPractice-Rework\\CheatPractice-Rework\\CheatPractice.csproj",
+      "libraryId": "Pastel",
+      "targetGraphs": [
+        "net9.0-windows7.0",
+        "net9.0-windows7.0/win-x64"
+      ]
+    }
+  ]
+}
